@@ -1,3 +1,4 @@
+import generator.Generator;
 import generator.PropertyLoader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -20,14 +21,17 @@ public class DeveloperTest {
         private AutorizationPage autorizationPage;
         private DeveloperPage developerPage;
         private ReestrDeveloperPage reestrDeveloperPage;
+        private Generator generator;
 
-        @BeforeMethod
+
+    @BeforeMethod
         public void setUp(){
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             developerPage = new DeveloperPage(driver);
             autorizationPage = new AutorizationPage(driver);
+            generator = new Generator();
             reestrDeveloperPage = new ReestrDeveloperPage(driver);
             driver.get(new PropertyLoader().getProperty("url.developerTest"));
             autorizationPage.emailField.sendKeys(new PropertyLoader().getProperty("login"));

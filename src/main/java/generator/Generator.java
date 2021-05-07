@@ -55,11 +55,10 @@ public class Generator {
         String mouth;
         if(number1<number2){
             String number = Integer.toString(number1);
-            mouth = "0"+number;
+            mouth = "0"+number1;
         } else{
             mouth = Integer.toString(number1);
         }
-
         String yaear = Integer.toString(1920 + index.nextInt(60));
         return day.concat(mouth).concat(yaear);
     }
