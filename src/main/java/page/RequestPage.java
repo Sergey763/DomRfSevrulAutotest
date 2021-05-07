@@ -59,8 +59,8 @@ public class RequestPage {
         this.complexDrop = new DropDown(driver, By.xpath("//*[text()='Комплекс']/..//*[@class=\"Select__select__arrow--3N4X7\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
         this.numberHomeDrop = new DropDown(driver, By.xpath("//*[text()='Номер дома']/..//*[@class=\"Select__select__arrow--3N4X7\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
         this.infoIpotekalDrop = new DropDown(driver, By.xpath("//*[text()='Информация о кредите и залоге']/..//*[@class=\"Select__select__arrow--3N4X7\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
-        this.searchSellerDrop = new DropDown(driver,By.xpath("//span[@class=\"Autocomplete__input__top--14_EB\" and text() = 'Поиск продавца по фамилии/наименованию']"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
-        this.searchBuyerDrop = new DropDown(driver,By.xpath("//span[@class=\"Autocomplete__input__top--14_EB\" and text() = 'Поиск покупателя по фамилии/наименованию']"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
+        this.searchSellerDrop = new DropDown(driver,By.xpath("//input[@name=\"seller.0.client.id\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
+        this.searchBuyerDrop = new DropDown(driver,By.xpath("//input[@name=\"buyer.0.client.id\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
         this.nameDocOsnovFild = new Field(driver,By.xpath("//input[@name=\"documents.0.name\"]"));
         this.numberDocOsnovField = new Field(driver,By.xpath("//input[@name=\"documents.0.number\"]"));
         this.dateDocOsnovField  = new Field(driver,By.xpath("//input[@name=\"documents.0.date\"]"));
@@ -71,16 +71,6 @@ public class RequestPage {
         this.issuedDocDopField = new Field(driver,By.xpath("//input[@name=\"optionalDocuments.0.issuerOrgan\"]"));
         this.uslovniyNomerField = new Field(driver,By.xpath("//input[@name=\"condNum\"]"));
 
-
-
-
-
-
     }
-
-
-
-
-
 
 }
