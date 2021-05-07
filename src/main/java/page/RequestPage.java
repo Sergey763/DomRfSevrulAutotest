@@ -64,7 +64,7 @@ public class RequestPage {
         this.nameDocOsnovFild = new Field(driver,By.xpath("//input[@name=\"documents.0.name\"]"));
         this.numberDocOsnovField = new Field(driver,By.xpath("//input[@name=\"documents.0.number\"]"));
         this.dateDocOsnovField  = new Field(driver,By.xpath("//input[@name=\"documents.0.date\"]"));
-        this.nameDocDopField = new Field(driver,By.xpath("//input[@name=\"optionalDocuments.0.name\"]"));
+        this.nameDocDopField = new Field(driver,By.xpath("//input[@name=\"documents.0.number\"]"));
         this.seriesDocDopField = new Field(driver,By.xpath("//input[@name=\"optionalDocuments.0.series\"]"));
         this.numberDocDopField = new Field(driver,By.xpath("//input[@name=\"optionalDocuments.0.number\"]"));
         this.dateDocDopField = new Field(driver,By.xpath("//input[@name=\"optionalDocuments.0.date\"]"));
