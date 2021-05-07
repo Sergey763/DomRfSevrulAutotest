@@ -17,8 +17,8 @@ public class RequestPage {
     public Button addBuyerButton;
     public Button addDocOsnovButton;
     public Button addDocDopButton;
-    public Button downloadFileOsnovButton;
-    public Button downloadFileDopButton;
+    public Field downloadFileOsnovField;
+    public Field downloadFileDopField;
     public Button deleteDocButton;
     public Button sformStatmentButton;
     public Button saveButton;
@@ -50,8 +50,8 @@ public class RequestPage {
         this.addBuyerButton = new Button(driver,By.xpath("(//button[@class=\"ct-button EditList__add--3oMn- Button__btn--i_ybi Button__btn--size_l--1i0WC Button__btn--type_secondary--1yhbS\"])[2]"));
         this.addDocOsnovButton = new Button(driver, By.xpath("(//button[@class=\"ct-button EditList__add--3oMn- Button__btn--i_ybi Button__btn--size_l--1i0WC Button__btn--type_secondary--1yhbS\"])[3]"));
         this.addDocDopButton = new Button(driver, By.xpath("(//button[@class=\"ct-button EditList__add--3oMn- Button__btn--i_ybi Button__btn--size_l--1i0WC Button__btn--type_secondary--1yhbS\"])[4]"));
-        this.downloadFileOsnovButton = new Button(driver, By.xpath("//input[@type='file']"));
-        this.downloadFileDopButton = new Button(driver, By.xpath("(//input[@type='file'])[2]"));
+        this.downloadFileOsnovField = new Field(driver, By.xpath("//input[@type='file']"));
+        this.downloadFileDopField= new Field(driver, By.xpath("(//input[@type='file'])[2]"));
         this.sformStatmentButton = new Button(driver,By.xpath("//button[text()='Сформировать заявление'] "));
         this.saveButton = new Button(driver,By.xpath("//button[text()='Сохранить'] "));
         this.sendRegistrationButton = new Button(driver,By.xpath("//button[text()='Отправить на регистрацию'] "));
