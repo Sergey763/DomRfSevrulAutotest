@@ -2,7 +2,6 @@ package factory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.Message;
 
 import java.nio.file.LinkOption;
 import java.util.BitSet;

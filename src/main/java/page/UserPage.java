@@ -5,7 +5,6 @@ import factory.DropDown;
 import factory.Field;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.AbstractDriverOptions;
 
 public class UserPage {
 

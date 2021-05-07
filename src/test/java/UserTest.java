@@ -94,7 +94,7 @@ public class UserTest {
 //        userPage.ppNumberdocFiled.sendKeys("1234567");
 //        userPage.ppDateDocFiled.sendKeys("09102010");
 //        userPage.ppOrganDocField.sendKeys("отделом");
-//        userPage.downloadFileField.sendKeys("C:/Users/ssardaev.NE0D4E8288246/Desktop/sevrulAuto/Докси.pdf");
+        userPage.downloadFileField.sendKeys("C:/Users/ssardaev.NE0D4E8288246/Desktop/sevrulAuto/Докси.pdf");
 //        userPage.saveButton.click();
     }
 }

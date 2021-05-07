@@ -57,7 +57,9 @@ public class RequestTest {
         requestPage.nameDocOsnovFild.sendKeys("Договор участия в долевом строительстве");
         requestPage.numberDocOsnovField.sendKeys("77");
         requestPage.dateDocOsnovField.sendKeys(generator.getDateBirthday());
-        requestPage.downloadFileOsnovField.sendKeys("C:/Users/ssardaev.NE0D4E8288246/Desktop/sevrulAuto.ДдуТест.pdf");
+        String text = "C:/Users/ssardaev.NE0D4E8288246/Desktop/sevrulAuto/ДдуТест.pdf";
+        System.out.println(text);
+        requestPage.downloadFileOsnovField.sendKeys(text);
         //requestPage.addDocOsnovButton.click();
         requestPage.sformStatmentButton.click();
 
