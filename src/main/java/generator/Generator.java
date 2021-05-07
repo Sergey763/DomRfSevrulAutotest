@@ -55,7 +55,7 @@ public class Generator {
         String mouth;
         if(number1<number2){
             String number = Integer.toString(number1);
-            mouth = "0"+number1;
+            mouth = "0"+number;
         } else{
             mouth = Integer.toString(number1);
         }
