@@ -45,12 +45,12 @@ public class RequestPage {
         this.registrDduButton = new Button(driver,By.xpath("//span[text()='Регистрация ДДУ']"));
         this.createRequestButton = new Button(driver,By.xpath("//button[text()='Создать заявку']"));
         this.copyButton = new Button(driver,By.xpath("//button[text()='Копировать заявку']"));
-        //this.addSellerButton = new Button(driver,By.xpath(""))
-        //this.addBuyerButton = new Button(driver,By.xpath(""))
-        //this.addDocOsnovButton = new Button(driver, By.xpath(""))
-        //this.addDocDopButton = new Button(driver, By.xpath(""))
-        //this.downloadFileOsnovButton = new Button(driver, By.xpath(""))
-        //this.downloadFileDopButton = new Button(driver, By.xpath(""))
+        this.addSellerButton = new Button(driver,By.xpath("(//button[@class=\"ct-button EditList__add--3oMn- Button__btn--i_ybi Button__btn--size_l--1i0WC Button__btn--type_secondary--1yhbS\"])[1]"));
+        this.addBuyerButton = new Button(driver,By.xpath("(//button[@class=\"ct-button EditList__add--3oMn- Button__btn--i_ybi Button__btn--size_l--1i0WC Button__btn--type_secondary--1yhbS\"])[2]"));
+        this.addDocOsnovButton = new Button(driver, By.xpath("(//button[@class=\"ct-button EditList__add--3oMn- Button__btn--i_ybi Button__btn--size_l--1i0WC Button__btn--type_secondary--1yhbS\"])[3]"));
+        this.addDocDopButton = new Button(driver, By.xpath("(//button[@class=\"ct-button EditList__add--3oMn- Button__btn--i_ybi Button__btn--size_l--1i0WC Button__btn--type_secondary--1yhbS\"])[4]"));
+        this.downloadFileOsnovButton = new Button(driver, By.xpath("//input[@type='file']"));
+        this.downloadFileDopButton = new Button(driver, By.xpath("(//input[@type='file'])[2]"));
         this.sformStatmentButton = new Button(driver,By.xpath("//button[text()='Сформировать заявление'] "));
         this.saveButton = new Button(driver,By.xpath("//button[text()='Сохранить'] "));
         this.sendRegistrationButton = new Button(driver,By.xpath("//button[text()='Отправить на регистрацию'] "));
