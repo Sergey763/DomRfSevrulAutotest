@@ -53,6 +53,15 @@ public class DropDown {
         }
     }
 
+    public void clickList3(String text) {
+        List<WebElement> checkDrops = driver.findElements(locatorSpisok);
+
+        for (WebElement spisok : checkDrops) {
+            if (spisok.getText().contains(text)) {
+                spisok.click();
+            }
+        }
+    }
     public String getText() {
         return driver.findElement(locatorDown).getText();
     }
