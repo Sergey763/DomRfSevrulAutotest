@@ -27,7 +27,6 @@ public class DeveloperTest {
         private ReestrDeveloperPage reestrDeveloperPage;
         private Generator generator;
         private MenuPage menuPage;
-        private Actions actions;
 
 
     @BeforeMethod
@@ -44,9 +43,6 @@ public class DeveloperTest {
             autorizationPage.emailField.sendKeys(new PropertyLoader().getProperty("login"));
             autorizationPage.passwordField.sendKeys(new PropertyLoader().getProperty("password"));
             autorizationPage.autorizationButton.click();
-            actions = new Actions(driver);
-
-
     }
 //    @After
 //    public void testDown(){
