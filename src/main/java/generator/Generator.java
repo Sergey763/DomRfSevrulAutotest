@@ -49,7 +49,7 @@ public class Generator {
     }
 
     public String getDateBirthday() {
-        int day1 = index.nextInt(30);
+        int day1 = index.nextInt(30)+1;
         int day2 = 10;
         String day;
         if(day1<day2){
