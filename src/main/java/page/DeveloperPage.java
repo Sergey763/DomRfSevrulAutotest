@@ -31,6 +31,7 @@ public class DeveloperPage {
     public Field numberField;
     public Field dateDocField;
     public DropDown adressDrop;
+    public DropDown reestrDeveloper;
 
     public DeveloperPage(WebDriver driver) {
         this.newDeveloperButton = new Button(driver, By.xpath("//button[text()='Новый застройщик']"));
@@ -56,7 +57,7 @@ public class DeveloperPage {
         this.numberField = new Field (driver, By.xpath("//input[@name=\"director.documentNumber\"]"));
         this.dateDocField = new Field(driver, By.xpath("//input[@name=\"director.documentDate\"]"));
         this.adressDrop = new DropDown(driver, By.xpath("//textarea[@name=\"address.value\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]\n"));
-
+        this.reestrDeveloper = new DropDown(driver,By.xpath("//div[@class=\"ListData__list--3-gL0\"]"));
     }
 
 
