@@ -43,7 +43,7 @@ public class RequestPage {
 
     public RequestPage(WebDriver driver){
         this.newRequestButton = new Button(driver, By.xpath("//button[text()='Новая заявка']"));
-        this.reestrUsersDrop = new DropDown(driver,By.xpath("//div[@class=\"Menu__container--3Qoqq\"]"));
+        this.reestrRequestDrop = new DropDown(driver,By.xpath("//div[@class=\"Menu__container--3Qoqq\"]"));
         this.dduButton = new Button(driver,By.xpath("//span[text()='ДДУ']"));
         this.registrDduButton = new Button(driver,By.xpath("//span[text()='Регистрация ДДУ']"));
         this.createRequestButton = new Button(driver,By.xpath("//button[text()='Создать заявку']"));
