@@ -3,10 +3,12 @@ import generator.PropertyLoader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.AutorizationPage;
+import page.ClientReestrPage;
 import page.UserPage;
 
 import java.util.concurrent.TimeUnit;
@@ -18,6 +20,7 @@ public class UserTest {
     private UserPage userPage;
     private AutorizationPage autorizationPage;
     private Generator generator;
+    private ClientReestrPage clientReestrPage;
 
     @BeforeMethod
     public void setUp() {
@@ -26,6 +29,7 @@ public class UserTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         userPage = new UserPage(driver);
         autorizationPage = new AutorizationPage(driver);
+        clientReestrPage = new ClientReestrPage(driver);
         generator = new Generator();
     }
 
@@ -47,6 +51,47 @@ public class UserTest {
         userPage.fizLastNameField.sendKeys("Руни");
         userPage.fizFirstNameField.sendKeys("Уэйн");
         userPage.fizMiddleNameField.sendKeys("Марк");
+        String lastName = userPage.fizLastNameField.getValue();
+        String firstName = userPage.fizFirstNameField.getValue();
+        String middleName = userPage.fizMiddleNameField.getValue();
+        String fullName = lastName + firstName + middleName;
+
+        userPage.fizBirthdateField.sendKeys(generator.getDateBirthday());
+        userPage.fizGenderDrop.clickList("Мужской");
+        userPage.fizMestoRogdeniaField.sendKeys("Англия");
+        userPage.fizEmailField.sendKeys(generator.getMil());
+        userPage.fizPhoneField.sendKeys(generator.getPhone());
+        userPage.fizCodeKeyField.sendKeys("кодик");
+        userPage.docTypeDrop.clickList("Паспорт гражданина Российской Федерации");
+        userPage.fizSeriesField.sendKeys("2942");
+        userPage.fizNumbersField.sendKeys("298249");
+        userPage.fizCodeField.sendKeys("310030");
+        userPage.fizkemVidanField.sendKeys("МРО УФМС РОССИИ ПО БЕЛГОРОДСКОЙ ОБЛ. В Г. АЛЕКСЕЕВКА");
+        userPage.fizDateField.sendKeys("10112011");
+        userPage.fizSnilsField.sendKeys("98923842390");
+        userPage.fizInnField.sendKeys("985923948092");
+        userPage.fizAdressDrop.sendKeys("г Санкт-Петербург");
+        userPage.fizAdressDrop.clickList2("г Санкт-Петербург");
+    }
+
+    @Test(description = "test стенд Создание участника Физическое лицо с представителем")
+    public void creatPredstavitel() {
+        driver.get(new PropertyLoader().getProperty("url.clientTest"));
+        autorizationPage.emailField.sendKeys(new PropertyLoader().getProperty("login"));
+        autorizationPage.passwordField.sendKeys(new PropertyLoader().getProperty("password"));
+        autorizationPage.autorizationButton.click();
+
+        userPage.newClientButton.click();
+        userPage.fizLicoButton.click();
+        userPage.createButton.click();
+        userPage.fizLastNameField.sendKeys("Руни");
+        userPage.fizFirstNameField.sendKeys("Уэйн");
+        userPage.fizMiddleNameField.sendKeys("Марк");
+        String lastName = userPage.fizLastNameField.getValue();
+        String firstName = userPage.fizFirstNameField.getValue();
+        String middleName = userPage.fizMiddleNameField.getValue();
+        String fullName = lastName + firstName + middleName;
+
         userPage.fizBirthdateField.sendKeys(generator.getDateBirthday());
         userPage.fizGenderDrop.clickList("Мужской");
         userPage.fizMestoRogdeniaField.sendKeys("Англия");
@@ -95,6 +140,9 @@ public class UserTest {
         userPage.ppDateDocFiled.sendKeys("09102010");
         userPage.ppOrganDocField.sendKeys("отделом");
         userPage.downloadFileField.sendKeys("C:/Users/ssardaev.NE0D4E8288246/Desktop/sevrulAuto/Докси.pdf");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         userPage.saveButton.click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Assert.assertEquals(fullName, clientReestrPage.clientsField.getText());
     }
 }
