@@ -10,6 +10,7 @@ public class DeveloperPage {
 
     public Button newDeveloperButton;
     public Button saveButton;
+    public Field fullNameField;
     public DropDown fullNameDrop;
     public Field shortNameField;
     public Field ogrnField;
@@ -36,6 +37,7 @@ public class DeveloperPage {
     public DeveloperPage(WebDriver driver) {
         this.newDeveloperButton = new Button(driver, By.xpath("//button[text()='Новый застройщик']"));
         this.saveButton = new Button(driver, By.xpath("//button[text()='Сохранить']"));
+        this.fullNameField = new Field(driver, By.xpath("//input[@name=\"name\"]"));
         this.fullNameDrop = new DropDown (driver, By.xpath("//input[@name=\"name\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
         this.shortNameField = new Field (driver,By.xpath("//input[@name=\"firmShortName\"]"));
         this.ogrnField = new Field (driver, By.xpath("//input[@name=\"ogrn\"]"));

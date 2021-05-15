@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 public class UserPage {
 
     public Button fizLicoButton;
+    public DropDown reestrUsersDrop;
     public Button newClientButton;
     public Button createButton;
     public Button saveButton;
@@ -105,6 +106,7 @@ public class UserPage {
         this.ppNumberdocFiled = new Field(driver, By.xpath("//input[@name=\"inDocuments.number\"]"));
         this.ppDateDocFiled = new Field(driver, By.xpath("//input[@name=\"inDocuments.date\"]"));
         this.ppOrganDocField = new Field(driver, By.xpath("//input[@name=\"inDocuments.issuerOrgan\"]"));
+        this.reestrUsersDrop = new DropDown(driver,By.xpath("//div[@class=\"Menu__container--3Qoqq\"]"));
         //дописать логику загрузки файлов
         this.downloadFileField = new Field(driver, By.xpath("//input[@type=\"file\"]"));
         //:\Users\ssardaev.NE0D4E8288246\Desktop\Тестовые файлы\Документы
