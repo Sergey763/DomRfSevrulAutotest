@@ -49,7 +49,16 @@ public class Generator {
     }
 
     public String getDateBirthday() {
-        String day = Integer.toString(index.nextInt(30));
+        int day1 = index.nextInt(30);
+        int day2 = 10;
+        String day;
+        if(day1<day2){
+            String number = Integer.toString(day1);
+            day = "0"+number;
+        } else{
+            day = Integer.toString(day1);
+        }
+
         int number1 = index.nextInt(12)+1;
         int number2 = 10;
         String mouth;
