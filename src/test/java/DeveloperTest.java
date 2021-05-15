@@ -1,13 +1,17 @@
 import generator.Generator;
 import generator.PropertyLoader;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.AutorizationPage;
 import page.DeveloperPage;
+import page.MenuPage;
 import page.ReestrDeveloperPage;
 
 
@@ -22,6 +26,8 @@ public class DeveloperTest {
         private DeveloperPage developerPage;
         private ReestrDeveloperPage reestrDeveloperPage;
         private Generator generator;
+        private MenuPage menuPage;
+        private Actions actions;
 
 
     @BeforeMethod
@@ -33,11 +39,15 @@ public class DeveloperTest {
             autorizationPage = new AutorizationPage(driver);
             generator = new Generator();
             reestrDeveloperPage = new ReestrDeveloperPage(driver);
+            menuPage = new MenuPage(driver);
             driver.get(new PropertyLoader().getProperty("url.developerTest"));
             autorizationPage.emailField.sendKeys(new PropertyLoader().getProperty("login"));
             autorizationPage.passwordField.sendKeys(new PropertyLoader().getProperty("password"));
             autorizationPage.autorizationButton.click();
-        }
+            actions = new Actions(driver);
+
+
+    }
 //    @After
 //    public void testDown(){
 //        driver.quit();
@@ -71,6 +81,7 @@ public class DeveloperTest {
             }
             developerPage.adressDrop.clickList2("г санкт-петербург");
             developerPage.saveButton.click();
+            driver.findElement(By.xpath("//body")).sendKeys(Keys.F5);
             Assert.assertEquals(nameDeveloper,reestrDeveloperPage.developersField.getText());
         }
     }
