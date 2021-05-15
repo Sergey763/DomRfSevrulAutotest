@@ -55,7 +55,6 @@ public class UserTest {
         String firstName = userPage.fizFirstNameField.getValue();
         String middleName = userPage.fizMiddleNameField.getValue();
         String fullName = lastName + firstName + middleName;
-
         userPage.fizBirthdateField.sendKeys(generator.getDateBirthday());
         userPage.fizGenderDrop.clickList("Мужской");
         userPage.fizMestoRogdeniaField.sendKeys("Англия");
@@ -80,7 +79,6 @@ public class UserTest {
         autorizationPage.emailField.sendKeys(new PropertyLoader().getProperty("login"));
         autorizationPage.passwordField.sendKeys(new PropertyLoader().getProperty("password"));
         autorizationPage.autorizationButton.click();
-
         userPage.newClientButton.click();
         userPage.fizLicoButton.click();
         userPage.createButton.click();
