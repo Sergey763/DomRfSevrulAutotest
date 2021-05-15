@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 public class RequestPage {
 
     public Button newRequestButton;
-    public DropDown reestrUsersDrop;
+    public DropDown reestrRequestDrop;
     public Button createRequestButton;
     public Button dduButton;
     public Button registrDduButton;
