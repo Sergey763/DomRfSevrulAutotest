@@ -62,6 +62,11 @@ public class DropDown {
             }
         }
     }
+
+    public List<WebElement> list() {
+        List<WebElement> checkDrops = driver.findElements(locatorSpisok);
+        return checkDrops;
+    }
     public String getText() {
         return driver.findElement(locatorDown).getText();
     }
