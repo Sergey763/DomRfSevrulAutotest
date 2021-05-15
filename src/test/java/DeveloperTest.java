@@ -49,8 +49,9 @@ public class DeveloperTest {
 //        driver.quit();
 //    }
 
+
         @Test
-        public void creatDeveloper() {
+        public void createDeveloper() {
             developerPage.newDeveloperButton.click();
             developerPage.fullNameDrop.sendKeys("Сбербанк");
             developerPage.fullNameDrop.clickList("пао сбербанк");
