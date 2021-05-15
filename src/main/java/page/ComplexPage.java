@@ -26,7 +26,7 @@ public class ComplexPage {
         this.newComplexButton = new Button(driver, By.xpath("//button[text()='Новый комплекс']"));
         this.addPlotButoon = new Button(driver, By.xpath("//button[text()='Добавить участок']"));
         this.addButton = new Button(driver, By.xpath("//button[text()='Добавить']"));
-        this.controlHomeButton = new Button(driver,By.xpath("//span[text()='Управление домами']"));
+        this.controlHomeButton = new Button(driver,By.xpath("(//input[@class=\"Radio__hidden--2Je5H\"])[2]"));
         this.controlPlotButton = new Button(driver,By.xpath("//span[text()='Управление участками']"));
         this.saveButton = new Button(driver,By.xpath("//button[text()='Сохранить']"));
         this.nameComplexField = new Field(driver, By.xpath("//input[@name=\"name\"]"));
@@ -34,7 +34,7 @@ public class ComplexPage {
         this.plotNumberField = new Field(driver,By.xpath("//input[@name=\"lands.0.name\"]"));
         this.kadastNumberField = new Field(driver,By.xpath("//input[@name=\"lands.0.cadNumZu\"]"));
         this.adressDrop = new DropDown(driver, By.xpath("//textarea[@name=\"lands.0.address.value\"]"),By.xpath("//*[@class=\"rc-select-item-option-content\"]"));
-        this.areaField = new Field(driver,By.xpath("////input[@name=\"lands.0.area\"]"));
+        this.areaField = new Field(driver,By.xpath("//input[@name=\"lands.0.area\"]"));
         this.numberHomeField = new Field(driver,By.xpath("//input[@name=\"number\"]"));
 
          //*[text()='Застройщик']/../..//*[@class="rc-select-selector"] click
