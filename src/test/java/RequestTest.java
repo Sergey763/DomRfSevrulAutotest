@@ -45,15 +45,15 @@ public class RequestTest {
         requestPage.dduButton.click();
         requestPage.registrDduButton.click();
         requestPage.createRequestButton.click();
-//        requestPage.typeObjectDrop.clickList("Квартира");
-//        requestPage.complexDrop.clickList("УДороги");
-//        requestPage.uslovniyNomerField.sendKeys("777");
-//        requestPage.addSellerButton.click();
-//        requestPage.searchSellerDrop.sendKeys("Цемент");
-//        requestPage.searchSellerDrop.clickList3("цемент");
-//        requestPage.addBuyerButton.click();
-//        requestPage.searchSellerDrop.sendKeys("пос");
-//        requestPage.searchSellerDrop.clickList2("Посрор Виктор Физикович без представителя , 235-347-456 45");
+        requestPage.typeObjectDrop.clickList("Квартира");
+        requestPage.complexDrop.clickList("УДороги");
+        requestPage.uslovniyNomerField.sendKeys("777");
+        requestPage.addSellerButton.click();
+        requestPage.searchSellerDrop.sendKeys("Цемент");
+        requestPage.searchSellerDrop.clickList3("цемент");
+        requestPage.addBuyerButton.click();
+        requestPage.searchSellerDrop.sendKeys("пос");
+        requestPage.searchSellerDrop.clickList2("Посрор Виктор Физикович без представителя , 235-347-456 45");
         requestPage.addDocOsnovButton.click();
         requestPage.nameDocOsnovFild.sendKeys("Договор участия в долевом строительстве");
         requestPage.numberDocOsnovField.sendKeys("77");
@@ -77,6 +77,5 @@ public class RequestTest {
         requestPage.registrDduButton.click();
         requestPage.createRequestButton.click();
         Assert.assertTrue(requestPage.statusNovayaField.isDisplayed());
-
     }
 }
