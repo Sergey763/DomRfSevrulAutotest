@@ -39,6 +39,7 @@ public class RequestPage {
     public Field dateDocDopField;
     public Field issuedDocDopField;
     public Field uslovniyNomerField;
+    public Field statusNovayaField;
     //логика скачивания файла и дальнейшее его добавление
 
     public RequestPage(WebDriver driver){
@@ -72,6 +73,7 @@ public class RequestPage {
         this.dateDocDopField = new Field(driver,By.xpath("//input[@name=\"optionalDocuments.0.date\"]"));
         this.issuedDocDopField = new Field(driver,By.xpath("//input[@name=\"optionalDocuments.0.issuerOrgan\"]"));
         this.uslovniyNomerField = new Field(driver,By.xpath("//input[@name=\"condNum\"]"));
+        this.statusNovayaField = new Field(driver,By.xpath("//span[text() = \"Новая\"]"));
 
     }
 
