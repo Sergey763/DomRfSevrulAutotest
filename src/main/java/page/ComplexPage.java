@@ -26,7 +26,7 @@ public class ComplexPage {
         this.newComplexButton = new Button(driver, By.xpath("//button[text()='Новый комплекс']"));
         this.addPlotButoon = new Button(driver, By.xpath("//button[text()='Добавить участок']"));
         this.addButton = new Button(driver, By.xpath("//button[text()='Добавить']"));
-        this.controlHomeButton = new Button(driver,By.xpath("(//input[@class=\"Radio__hidden--2Je5H\"])[2]"));
+        this.controlHomeButton = new Button(driver,By.xpath("(//input[@name = \"radio\"])[2]"));
         this.controlPlotButton = new Button(driver,By.xpath("//span[text()='Управление участками']"));
         this.saveButton = new Button(driver,By.xpath("//button[text()='Сохранить']"));
         this.nameComplexField = new Field(driver, By.xpath("//input[@name=\"name\"]"));
